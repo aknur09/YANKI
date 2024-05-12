@@ -1,0 +1,392 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family : Raleway;
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+    /* border: 2px solid green; */
+}
+/*   
+  header {
+   color: rgba(255, 255, 255, 1);
+    text-align: center;
+  }
+
+  header h1 {
+    font-weight: 300;
+    font-style: 46px;
+   
+  }
+  
+  header h4 {
+    font-weight: 300;
+    font-style: 16px;
+  }
+
+  .header-text{
+    margin-top: -35rem;
+  }
+
+  .mainTeatle {
+    font-size: 40px;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  nav{
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    gap: 10%;
+    margin-top: 2%;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+ 
+  }
+
+  nav ul li {
+  list-style: none;
+  } */
+
+
+  header { 
+    color: rgba(255, 255, 255, 1); 
+     text-align: center; 
+   } 
+
+   header h1 { 
+     font-weight: 300; 
+     font-style: 46px; 
+
+   } 
+
+   header h4 { 
+     font-weight: 300; 
+     font-style: 16px; 
+   } 
+
+   .header-text{ 
+     margin-top: -35rem; 
+   } 
+
+   .mainTitle {
+    position: absolute;
+    font-size: 40px;
+    left: 500px;
+    top: -20px;
+    color: rgb(255, 255, 255);
+    z-index: 100;
+
+}
+
+nav {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    z-index: 100;
+    width: 1140px;
+    height: 40px;
+    top: 24px;
+    left: 100px;
+    gap: 0px;
+    opacity: 1;
+}
+
+   /* .mainTeatle { 
+     font-size: 40px; 
+     color: rgba(255, 255, 255, 1); 
+     z-index: 100;
+   } 
+
+   nav{ 
+
+     display: grid; 
+     grid-template-columns: 1fr 1fr 0.5fr; 
+     gap: 10%; 
+     margin-top: 2%;
+     z-index: 100; 
+     opacity: 1;
+   }  */
+
+   nav ul { 
+     display: flex; 
+     justify-content: space-between; 
+z-index: 100;
+   } 
+
+   nav ul li { 
+   list-style: none; 
+   }
+
+  .hero button{
+    margin-top: 1rem;
+    background-color: rgba(224, 190, 162, 1);
+    color: rgba(255, 255, 255, 1);
+    font-weight: 300;
+    font-style: 16px;
+    width:600px;
+    height: 50px;
+
+  }
+
+  .hero h1 {
+    font-weight: 300;
+    font-style: 36px;
+    margin-left: 50px;
+  }
+  
+  .hero p {
+    font-weight: 200;
+    font-style: 16px;
+    margin-top: 1rem;
+    margin-left: 50px;
+  }
+
+  .hero input {
+    margin-top: 2rem;
+    font-weight: 200;
+    font-style: 16px;
+    width:600px;
+    height: 50px;
+    text-align: center;
+  }
+
+  .hero {
+    margin-top: 7rem;
+    margin-left: 17rem;
+  }
+
+  .category {
+    margin-left: 2rem;
+  }
+
+  .footerYanky h5{
+    font-weight: 300;
+    font-style: 30px;
+  }
+
+  .footerYanky {
+    margin-top: 5rem;
+    display: flex;
+    gap: 7rem;
+    margin-left: 15rem;
+  }
+
+  .order-emails input{
+width: 400px;
+height: 50px;
+  }
+
+ .contacts-text{
+  display: flex;
+  /* justify-content:space-between ; */
+  gap: 250px;
+  margin-top: 2rem;
+ }
+
+.contacts h6 {
+  font-weight: 200;
+  font-style: 16px;
+}
+
+.text-contacts{
+  display: flex;
+  gap: 190px;
+ 
+}
+
+.telephone{
+  margin-left: 100px;
+}
+
+.contacts h5{
+  margin-top: 1rem;
+  font-weight: 300;
+  font-style: 20px;
+}
+
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+
+.overlay{ 
+  background: rgba(33,33,33,0.7); 
+  position: fixed; 
+  top: 0; 
+  bottom: 0; 
+  right: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 55; 
+
+
+  .auth{ 
+      width: 350px; 
+      background-color: white; 
+  } 
+}
+
+.header-logo{
+  background-image: url('./assets/background.png');
+}
+
+.personalArea {
+  margin-top: 7rem;
+}
+
+.returnTerms {
+  margin-top: 1rem;
+}
+
+.terms {
+  margin-top: 5rem;
+}
+
+.returnTerms h3{
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.card img{
+  width: 30px;
+}
+
+.termsCard {
+  display: flex;
+  gap: 50px;
+}
+
+li a{
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+.headerLogo{ 
+  background-image: url('./assets/background.png'); 
+  height: 100vh; 
+  width: 100%; 
+  background-size: cover; 
+  color: white; 
+}
+  .headerBlock{ 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      height: 60vh; 
+  } 
+  .line{ 
+      width: 120px; 
+      height: 1px; 
+      background-color: white; 
+      margin: 20px 0; 
+  } 
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+
+.content {
+  flex: 1;
+}
